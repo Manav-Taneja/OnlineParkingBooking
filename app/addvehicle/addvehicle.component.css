@@ -1,0 +1,12 @@
+.contact-form{
+    margin-left: 400px;
+     background: #f3f3f3; 
+    width: 300px;
+    margin-right: 500px;
+    padding: 10PX;
+    color: royalblue;
+}
+.container{
+    background-image: url("../../assets/parkinglot.jpg");
+    width: 100%;
+}

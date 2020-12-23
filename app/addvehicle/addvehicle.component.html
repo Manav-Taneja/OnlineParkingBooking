@@ -1,0 +1,21 @@
+<br>
+<div class="container">
+<br>
+<br>
+<br>
+<div class="contact-form">
+    <!-- <img alt="" class="avatar" src="https://i.postimg.cc/zDyt7KCv/a1.jpg"> -->
+    <h2>Add Vehicle</h2>
+    <form action="/viewvehicle">
+        <p><b>Vehicle Name</b></p><input type="text" [(ngModel)]="name" placeholder="Enter Vehicle Name"  id="name" >
+        <p><b>Number</b></p><input type="text" [(ngModel)]="v_number" placeholder="Vehicle Number"  id="number" >
+        <p><b>Color</b></p><input placeholder="Vehicle Color" type="text" id="color" [(ngModel)]="color"><br><br>
+        <div>
+            <a href="/viewvehicle"><input type="submit" value="Add" (click)="postData()"></a>
+        </div>
+    </form>
+</div>
+<br>
+<br>
+<br>
+</div>
