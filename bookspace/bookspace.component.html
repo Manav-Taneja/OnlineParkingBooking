@@ -1,0 +1,54 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div id="tablecontainer">
+<table style="width:100%">
+    <tr>
+      <td><button style="width: 200px;height: 200px;margin-top: 40px;padding: 5px;margin-left: 5px;color: darkgreen;" id="1" (click)="openForm(this)"><b>Available</b></button></td>
+      <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;"  id="2" (click)="openForm(this)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;"   id="3" (click)="openForm(this)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;"  id="4" (click)="openForm(this)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;" id="5" (click)="openForm(this)"><b>Available</b></button></td>
+    </tr>
+    <tr >
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;padding: 5px;margin-left: 5px;color: darkgreen;"  id="6" (click)="openForm(6)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;"  id="7" (click)="openForm(this)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;"  id="8" (click)="openForm(this)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;"  id="9" (click)="openForm(this)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;" id="10" (click)="openForm(this)"><b>Available</b></button></td>
+      </tr>
+      <tr>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;padding: 5px;margin-left: 5px;color: darkgreen;"  id="11" (click)="openForm(this)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;"  id="12" (click)="openForm(this)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;"  id="13" (click)="openForm(this)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;"  id="14" (click)="openForm(this)"><b>Available</b></button></td>
+        <td><button style="width: 200px;height: 200px;margin-top: 40px;color: darkgreen;"  id="15" (click)="openForm(this)"><b>Available</b></button></td>
+      </tr>
+  </table>
+</div>
+  <div class="form-popup" id="myForm">
+    <form action="" class="form-container">
+      <h1>Book A slot</h1>
+  
+      <label for="Book"><b>Choose your car:</b></label>
+      <br>
+      <select id="selectname" ><option *ngFor="let order of data; let i = index" [value]="data[i].vehicle_name">
+        {{data[i].vehicle_name}}
+      </option></select>
+      <br>
+      <br>
+      <label for="Book"><b>Your Slot Number:</b></label>
+      <input type="text"  id="slotnumber">
+      <br>
+      <label for="appt"><b> a Check-in-Time: </b></label>
+      <input type="time" id="in" name="appt">
+      <br>
+      <label for="appt"><b>Select a Check-Out-Time: </b></label>
+      <input type="time" id="out" name="appt">
+      <br>
+      <input type="submit" class="btn" (click)="submitForm()" value="Book Space">
+      
+    </form>
+  </div>
+
+
